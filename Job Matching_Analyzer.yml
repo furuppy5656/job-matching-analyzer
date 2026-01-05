@@ -1,0 +1,1602 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: Job Matching Analyzer
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/ollama:0.1.1@f3a8b649027d1bd13e67df96f3463a601c16628da4292705528d28d97d96b263
+    version: null
+kind: app
+version: 0.5.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767248511187-source-1767248801044-target
+      source: '1767248511187'
+      sourceHandle: source
+      target: '1767248801044'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767248801044-source-1767249164138-target
+      source: '1767248801044'
+      sourceHandle: source
+      target: '1767249164138'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767249164138-source-1767249259786-target
+      source: '1767249164138'
+      sourceHandle: source
+      target: '1767249259786'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767249259786-source-1767249319718-target
+      source: '1767249259786'
+      sourceHandle: source
+      target: '1767249319718'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767249319718-source-1767251655216-target
+      source: '1767249319718'
+      sourceHandle: source
+      target: '1767251655216'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767251655216-source-1767252408923-target
+      source: '1767251655216'
+      sourceHandle: source
+      target: '1767252408923'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767252408923-source-1767257555423-target
+      source: '1767252408923'
+      sourceHandle: source
+      target: '1767257555423'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767257555423-source-1767257664704-target
+      source: '1767257555423'
+      sourceHandle: source
+      target: '1767257664704'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767257664704-source-1767257623006-target
+      source: '1767257664704'
+      sourceHandle: source
+      target: '1767257623006'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767257623006-source-1767257826554-target
+      selected: false
+      source: '1767257623006'
+      sourceHandle: source
+      target: '1767257826554'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767257826554-source-1767258056552-target
+      source: '1767257826554'
+      sourceHandle: source
+      target: '1767258056552'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1767258056552-source-1767249400302-target
+      source: '1767258056552'
+      sourceHandle: source
+      target: '1767249400302'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1767247535851-source-1767341486593-target
+      source: '1767247535851'
+      sourceHandle: source
+      target: '1767341486593'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767341486593-source-1767341853199-target
+      source: '1767341486593'
+      sourceHandle: source
+      target: '1767341853199'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767341853199-source-1767343390321-target
+      source: '1767341853199'
+      sourceHandle: source
+      target: '1767343390321'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767343390321-source-1767344053383-target
+      source: '1767343390321'
+      sourceHandle: source
+      target: '1767344053383'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767344536321-source-1767248511187-target
+      source: '1767344536321'
+      sourceHandle: source
+      target: '1767248511187'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767247812360-source-1767344631071-target
+      source: '1767247812360'
+      sourceHandle: source
+      target: '1767344631071'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767344631071-source-1767344536321-target
+      source: '1767344631071'
+      sourceHandle: source
+      target: '1767344536321'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767343390321-source-1767344631071-target
+      source: '1767343390321'
+      sourceHandle: source
+      target: '1767344631071'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767344053383-source-1767344631071-target
+      source: '1767344053383'
+      sourceHandle: source
+      target: '1767344631071'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1767341853199-source-1767247812360-target
+      source: '1767341853199'
+      sourceHandle: source
+      target: '1767247812360'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: User Input
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: Job Description
+          max_length: 10000
+          options: []
+          placeholder: ''
+          required: true
+          type: paragraph
+          variable: job_description
+        - default: 完全に日本語で分析を実行してください。技術用語以外はすべて日本語で出力。
+          hint: ''
+          label: Analysis Type
+          max_length: 100
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: user_query
+        - default: ''
+          hint: ''
+          label: Job Description 2 (Optional)
+          max_length: 5000
+          options: []
+          placeholder: ''
+          required: false
+          type: paragraph
+          variable: job_description_2
+        - default: ''
+          hint: ''
+          label: Job Description 3 (Optional)
+          max_length: 5000
+          options: []
+          placeholder: ''
+          required: false
+          type: paragraph
+          variable: job_description_3
+        - hint: ''
+          label: '"履歴書の内容をここに貼り付けてください"'
+          max_length: 10000
+          options: []
+          placeholder: ''
+          required: true
+          type: paragraph
+          variable: resume_text
+        - hint: ''
+          label: '"職務経歴書の内容をここに貼り付けてください（任意）"'
+          max_length: 10000
+          options: []
+          placeholder: ''
+          required: false
+          type: paragraph
+          variable: career_history
+        - hint: ''
+          label: '"求人ページのURLを入力（例: https://...）"'
+          max_length: 5000
+          options: []
+          placeholder: ''
+          required: false
+          type: paragraph
+          variable: job_url
+      height: 263
+      id: '1767247535851'
+      position:
+        x: -116.87034872499208
+        y: 280.8685612142242
+      positionAbsolute:
+        x: -116.87034872499208
+        y: 280.8685612142242
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 8872e8c5-557c-42a9-86ee-0b71d20ce590
+          role: system
+          text: 'Start with: 【マッチング分析結果】
+
+
+            You are a job matching analyst. Analyze the job description and provide:
+
+            1. Matching score (0-100)
+
+            2. Skills match percentage
+
+            3. Experience relevance
+
+            4. Missing requirements
+
+            5. Strengths for this position
+
+            6. Recommended action items
+
+
+            Be specific and provide actionable insights.
+
+
+            CRITICAL: All output must be in Japanese. Use Japanese for all explanations,
+            analysis, and recommendations. Only keep technical terms (React.js, TypeScript,
+            API, etc.) in English.
+
+            '
+        - id: 144bdc01-0341-4564-a876-9e51360c68ec
+          role: user
+          text: '
+
+            {{#1767247535851.job_description#}}'
+        selected: false
+        title: Matching Analysis
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767247812360'
+      position:
+        x: 1415.1706688839643
+        y: 572.0778080220362
+      positionAbsolute:
+        x: 1415.1706688839643
+        y: 572.0778080220362
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 5b651303-011c-446a-911e-1e9a942214bc
+          role: system
+          text: 'Start with: 【想定面接質問と回答戦略】
+
+
+            Generate 10 likely interview questions for this position:
+
+            - 3 technical questions
+
+            - 3 behavioral questions
+
+            - 2 situational questions
+
+            - 2 culture fit questions
+
+
+            For each question, provide a brief answer strategy.'
+        - id: 17f07f33-0c57-4083-a008-fe97c04a4d60
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Previous analysis: {{#context#}}'
+        selected: false
+        title: Interview Questions
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767248511187'
+      position:
+        x: 2783.9173572306445
+        y: 282
+      positionAbsolute:
+        x: 2783.9173572306445
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 4f7d7b64-89d6-4739-8d59-3b8f2455f12a
+          role: system
+          text: 'Start with: 【企業研究レポート】
+
+
+            Create a comprehensive company research note including:
+
+            1. Company Overview (based on job description)
+
+            2. Technology Stack Analysis
+
+            3. Company Culture Indicators
+
+            4. Growth Opportunities
+
+            5. Red Flags or Concerns
+
+            6. Questions to Ask in Interview
+
+            7. Competitive Positioning
+
+
+            Format in bullet points for easy reference.'
+        - id: 6f6db9b1-5c88-4c47-b68a-e7f6e5627b04
+          role: user
+          text: 'Job posting: {{#1767247535851.job_description#}}
+
+            Analysis: {{#context#}}'
+        selected: false
+        title: Company Research
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767248801044'
+      position:
+        x: 3084
+        y: 282
+      positionAbsolute:
+        x: 3084
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 315ad1be-cc6c-4511-9ab8-2e13947c479c
+          role: system
+          text: 'Start with: 【給与交渉戦略】
+
+
+            You are a salary negotiation expert. Provide strategic guidance including:
+
+            1. Market salary range analysis
+
+            2. Your negotiation position (weak/moderate/strong)
+
+            3. Initial salary request recommendation
+
+            4. Counter-offer strategies
+
+            5. Non-monetary benefits to negotiate
+
+            6. Red lines to avoid crossing
+
+            7. Best timing for negotiation
+
+
+            Be specific with numbers and percentages where applicable.'
+        - id: a7ab9488-c76e-41f9-a8f3-c6d01f22c7c4
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Analysis: {{#context#}}
+
+            User query: {{#1767247535851.user_query#}}'
+        selected: false
+        title: Salary Negotiation
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767249164138'
+      position:
+        x: 3385
+        y: 282
+      positionAbsolute:
+        x: 3385
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 9938d843-0f12-408c-ab60-6969ab8a398e
+          role: system
+          text: 'Start with: 【応募メール文例】
+
+
+            Write a compelling cover letter that:
+
+            1. Opens with strongest match point
+
+            2. Highlights relevant technical skills
+
+            3. Emphasizes leadership & culture fit
+
+            4. Addresses experience gaps proactively
+
+            5. Closes with clear next steps
+
+
+            Format: Professional yet personable, 300-400 words
+
+            Include specific achievements with metrics.
+
+            End with professional email signature format.'
+        - id: e512cc1f-79be-46f0-a961-9be330a5bfcc
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Analysis: {{#context#}}
+
+            Create compelling cover letter'
+        selected: false
+        title: Cover Letter
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767249259786'
+      position:
+        x: 3686
+        y: 282
+      positionAbsolute:
+        x: 3686
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: efd2399c-cb59-4ef2-b0ca-89ea640eed9a
+          role: system
+          text: "Start with: 【学習計画ロードマップ】\n\nCreate a comprehensive learning plan\
+            \ including:\n1. Priority skills to learn (ranked)\n2. Learning timeline\
+            \ (30/60/90 day plan)\n3. Specific resources for each skill:\n   - Free\
+            \ resources (documentation, YouTube)\n   - Paid courses (Udemy, Coursera)\n\
+            \   - Practice projects\n4. Certification recommendations\n5. Time investment\
+            \ estimate (hours/week)\n6. Success metrics to track progress\n\nFocus\
+            \ on practical, actionable steps for working professionals."
+        - id: 73c373cd-cc24-4d41-a80c-f11df82b21cd
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Skills gaps: {{#context#}}
+
+            Create personalized learning roadmap'
+        selected: false
+        title: Learning Plan
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767249319718'
+      position:
+        x: 3987
+        y: 282
+      positionAbsolute:
+        x: 3987
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        outputs:
+        - value_selector:
+          - '1767247812360'
+          - text
+          value_type: string
+          variable: analysis
+        - value_selector:
+          - '1767248511187'
+          - text
+          value_type: string
+          variable: interview
+        - value_selector:
+          - '1767248801044'
+          - text
+          value_type: string
+          variable: research
+        - value_selector:
+          - '1767249164138'
+          - text
+          value_type: string
+          variable: salary
+        - value_selector:
+          - '1767249259786'
+          - text
+          value_type: string
+          variable: letter
+        - value_selector:
+          - '1767249319718'
+          - text
+          value_type: string
+          variable: learning
+        - value_selector:
+          - '1767251655216'
+          - text
+          value_type: string
+          variable: resume_optimizer
+        - value_selector:
+          - '1767252408923'
+          - text
+          value_type: string
+          variable: star_answers
+        - value_selector:
+          - '1767257555423'
+          - text
+          value_type: string
+          variable: weakness_strategy
+        - value_selector:
+          - '1767257623006'
+          - text
+          value_type: string
+          variable: market_value
+        - value_selector:
+          - '1767257664704'
+          - text
+          value_type: string
+          variable: culture_fit
+        - value_selector:
+          - '1767257826554'
+          - text
+          value_type: string
+          variable: industry_trend
+        - value_selector:
+          - '1767258056552'
+          - text
+          value_type: string
+          variable: job_comparison
+        - value_selector:
+          - '1767341486593'
+          - text
+          value_type: string
+          variable: resume_analysis
+        - value_selector:
+          - '1767341853199'
+          - text
+          value_type: string
+          variable: job_info
+        - value_selector:
+          - '1767343390321'
+          - text
+          value_type: string
+          variable: customized_resume
+        - value_selector:
+          - '1767344053383'
+          - text
+          value_type: string
+          variable: optimized_career
+        - value_selector:
+          - '1767344536321'
+          - text
+          value_type: string
+          variable: application_package
+        selected: true
+        title: Output
+        type: end
+      height: 532
+      id: '1767249400302'
+      position:
+        x: 7014.952881087773
+        y: 286.6823130620922
+      positionAbsolute:
+        x: 7014.952881087773
+        y: 286.6823130620922
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 24d9b275-5807-4483-9a4a-92a98fb1e145
+          role: system
+          text: 'Start with: 【職務経歴書最適化アドバイス】
+
+
+            You are a resume optimization specialist. Based on the job description
+            and analysis results, provide the following in Japanese:
+
+            1. TOP 5 experiences and skills to emphasize
+
+            2. List of keywords to use that match the job requirements
+
+            3. Specific achievement metrics to add
+
+            4. Information that can be removed or simplified
+
+            5. Example job summary (100 characters in Japanese)
+
+
+            Provide concise and practical advice.'
+        - id: 74f3013a-f1a1-48dd-b057-749dc41fde12
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Analysis: {{#context#}}'
+        selected: false
+        title: Resume Optimizer
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767251655216'
+      position:
+        x: 4288
+        y: 282
+      positionAbsolute:
+        x: 4288
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 71b1e90c-2304-49e3-89a8-5832d68204be
+          role: system
+          text: 'Start with: 【STAR形式回答例】
+
+
+            You are an interview preparation specialist. Create STAR format answers
+            in Japanese for common questions about this job.
+
+
+            Create example answers for these 3 questions:
+
+            1. Experience overcoming difficulties
+
+            2. Experience achieving results in a team
+
+            3. Experience learning from failure
+
+
+            Structure each answer as follows:
+
+            - Situation: Background explanation
+
+            - Task: Challenge faced
+
+            - Action: Specific actions taken
+
+            - Result: Quantitative results
+
+
+            Keep each answer around 200 Japanese characters.'
+        - id: b983158a-392a-4830-8eb8-e6565cd5e64f
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Context: {{#context#}}'
+        selected: false
+        title: STAR Answer Generator
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767252408923'
+      position:
+        x: 4588
+        y: 282
+      positionAbsolute:
+        x: 4588
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: f9b01f2d-f947-437c-b972-3a498f072834
+          role: system
+          text: "Start with: 【弱点カバー戦略】\n\nYou are a career advisor. Propose strategies\
+            \ in Japanese to cover gaps with job requirements:\n\n1. Strategies for\
+            \ missing skills\n   - How to appeal similar alternative skills\n   -\
+            \ Effective ways to show learning motivation\n   - Realistic presentation\
+            \ of acquisition timeline\n\n2. Handling insufficient years of experience\n\
+            \   - How to compensate with quality\n   - Expressions to emphasize rapid\
+            \ growth\n\n3. Positive reframing examples\n   - \"No experience\" → \"\
+            Can provide fresh perspectives\" etc.\n\nProvide specific explanations\
+            \ that will convince interviewers."
+        - id: 05741c23-7a2a-43b4-839f-a4cb46313a97
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Gaps: {{#context#}}
+
+            '
+        selected: false
+        title: Weakness Cover Strategy
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767257555423'
+      position:
+        x: 4879.593293176897
+        y: 282
+      positionAbsolute:
+        x: 4879.593293176897
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 66611d1e-6d4e-4b4c-8803-eef241ebb8b7
+          role: system
+          text: "\nStart with: 【市場価値診断】\n\nYou are a talent market specialist. Provide\
+            \ market value analysis in Japanese:\n\n1. Estimated salary range\n  \
+            \ - Current market value with skills: XXX-XXX万円\n   - Appropriate salary\
+            \ for this job: XXX-XXX万円\n   - Expected value after 1 year: XXX-XXX万円\n\
+            \n2. Market value by skill\n   - High-value skills (salary +1M yen or\
+            \ more)\n   - Standard skills (market average)\n   - Skills with improvement\
+            \ potential\n\n3. Suggestions for salary increase\n   - Most effective\
+            \ skills to acquire\n   - Recommended certifications\n   - Areas to gain\
+            \ experience\n\nBase analysis on Tokyo IT market standards."
+        - id: 2ef021ff-e0d1-42f1-9014-159acd438753
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Skills analysis: {{#context#}}'
+        selected: false
+        title: Market Value Analysis
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767257623006'
+      position:
+        x: 5301.002909851397
+        y: 286.6823130620922
+      positionAbsolute:
+        x: 5301.002909851397
+        y: 286.6823130620922
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767248801044'
+          - text
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 25028312-fdef-45ae-b7b6-0a6244146d7a
+          role: system
+          text: "\nStart with: 【企業文化適合度分析】\n\nYou are an organizational psychology\
+            \ expert. Analyze culture fit from the job description in Japanese:\n\n\
+            1. Company culture characteristics (inferred from job posting)\n   - Work\
+            \ style (remote, flex time, etc.)\n   - Team culture (collaboration focus,\
+            \ individual discretion, etc.)\n   - Growth environment (training system,\
+            \ mentorship, etc.)\n   - Evaluation criteria (performance-based, process-oriented,\
+            \ etc.)\n\n2. Fit assessment (0-100 points)\n   - Remote work compatibility\n\
+            \   - Startup culture compatibility\n   - Alignment with learning motivation\n\
+            \   - Career goal alignment\n\n3. Points to note\n   - Cultural gaps\n\
+            \   - Mindset needed for adaptation\n   - Items to confirm before joining"
+        - id: 59ab0f01-577f-472a-a66f-1e5c96a705ad
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            User preference: {{#1767247535851.user_query#}}
+
+            Company context: {{#context#}}'
+        selected: false
+        title: Culture Fit Analysis
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767257664704'
+      position:
+        x: 5771.651401176681
+        y: 282
+      positionAbsolute:
+        x: 5771.651401176681
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767248801044'
+          - text
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: bd725c8b-b2a1-479f-8a96-015040675ba8
+          role: system
+          text: "Start with: 【業界トレンド分析】\n\nYou are an industry analyst. Analyze industry\
+            \ trends for this job in Japanese:\n\n1. Industry status and future prospects\
+            \ (3-5 years)\n   - Growth rate forecast\n   - Major trends\n   - Impact\
+            \ of technological innovation\n\n2. Changes in required skills\n   - Skills\
+            \ becoming important\n   - Skills that may become obsolete\n   - Newly\
+            \ emerging job types\n\n3. Career prospects\n   - This position in 5 years\n\
+            \   - Expected career paths\n   - Changes in job market value\n\n4. Risks\
+            \ and opportunities\n   - Industry-specific risks\n   - Growth opportunities\n\
+            \   - What to prepare for"
+        - id: 2242a2c8-eed1-4d89-b372-bf04b1df29e5
+          role: user
+          text: 'Job: {{#1767247535851.job_description#}}
+
+            Company analysis: {{#context#}}'
+        selected: false
+        title: 'Industry Trend Analysis '
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767257826554'
+      position:
+        x: 6414.952881087773
+        y: 286.6823130620922
+      positionAbsolute:
+        x: 6414.952881087773
+        y: 286.6823130620922
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1767247812360'
+          - text
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 0a7d96c6-e2fd-41df-8f7a-08b82fcb35eb
+          role: system
+          text: "\nStart with: 【求人比較分析】\n\nYou are a job comparison specialist. Compare\
+            \ and rank multiple job opportunities in Japanese:\n\n1. Overall evaluation\
+            \ (100 points for each job)\n   - Matching degree\n   - Growth opportunities\n\
+            \   - Compensation conditions\n   - Company stability\n\n2. Comparison\
+            \ table\n   | Item | Job 1 | Job 2 | Job 3 |\n   |------|-------|-------|-------|\n\
+            \   | Salary | | | |\n   | Skill match | | | |\n   | Growth opportunities\
+            \ | | | |\n   | Work-life balance | | | |\n\n3. Ranking with reasons\n\
+            \   1st place: [Reason]\n   2nd place: [Reason]\n   3rd place: [Reason]\n\
+            \n4. Unique strengths of each job\n\n5. Final recommendation and rationale"
+        - id: cf43965e-d79e-4666-9f3f-13dd1363ef5f
+          role: user
+          text: 'Job 1: {{#1767247535851.job_description#}}
+
+            Job 2: {{#1767247535851.job_description_2#}}
+
+            Job 3: {{#1767247535851.job_description_3#}}
+
+            Analysis: {{#context#}}'
+        selected: false
+        title: Job Comparison
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767258056552'
+      position:
+        x: 6714.952881087773
+        y: 286.6823130620922
+      positionAbsolute:
+        x: 6714.952881087773
+        y: 286.6823130620922
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 52d20c27-1356-4091-8446-faf931d2e884
+          role: system
+          text: "You are a resume analysis expert. Extract and structure the following\
+            \ information from the input resume in Japanese:\n\n1. Personal Information（個人情報）\n\
+            \   - 氏名、連絡先、居住地域\n\n2. Skills Summary（スキル要約）\n   - 技術スキル（習熟度レベル付き）\n\
+            \   - ソフトスキル\n   - 使用可能ツール/フレームワーク\n\n3. Work Experience（職歴）\n   - 会社名、役職、在籍期間\n\
+            \   - 主要な成果（可能な限り数値化）\n   - 担当プロジェクト\n\n4. Education & Certifications（学歴・資格）\n\
+            \   - 最終学歴\n   - 保有資格\n   - 受賞歴\n\n5. Strengths（強み）\n   - ユニークな価値提案\n\
+            \   - 差別化要因\n\nIMPORTANT: \n- Output everything in Japanese language only\n\
+            - Structure the output in clear sections\n- Extract quantifiable achievements\
+            \ where possible"
+        - id: 5c2d0c23-64b6-4dce-bf28-27a5e1aeacc7
+          role: user
+          text: 'Please analyze the resume content. Output the results in Japanese.
+
+
+            Resume content:
+
+
+            {{#1767247535851.resume_text#}}
+
+
+            Additional career history (if provided):
+
+
+
+            {{#1767247535851.career_history#}}'
+        selected: false
+        title: Resume Input Processor
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767341486593'
+      position:
+        x: 382
+        y: 282
+      positionAbsolute:
+        x: 382
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 3791b3bf-affa-4635-987b-7f2edf29c0bc
+          role: system
+          text: "You are a job requirements analyzer. Based on the job URL or job\
+            \ description provided, extract and analyze the job requirements.\n\n\
+            If a URL is provided, simulate what the typical requirements would be\
+            \ for such a position based on the URL pattern and company name.\nIf a\
+            \ job description text is provided, extract the actual requirements.\n\
+            \nExtract the following information in Japanese:\n\n1. 職種・ポジション名\n   -\
+            \ 推測される役職レベル\n   - 雇用形態\n\n2. 必須スキル要件\n   - 技術スキル（プログラミング言語、フレームワーク）\n\
+            \   - 経験年数要件\n   - 必須資格\n\n3. 歓迎スキル要件\n   - あれば尚可のスキル\n   - 優遇される経験\n\n\
+            4. 企業情報\n   - 企業規模（推測）\n   - 業界\n   - 開発環境/技術スタック\n\n5. キーワード抽出\n   -\
+            \ 求人の重要キーワード（最大10個）\n\nNote: This is a simplified version. In production,\
+            \ actual web scraping would be implemented.\nIMPORTANT: Output everything\
+            \ in Japanese."
+        - id: f38a6d7e-0f2d-4c4d-b3da-d2ac8039d3c4
+          role: user
+          text: 'Analyze the job information:
+
+
+            Job URL (if provided):
+
+            {{#1767247535851.job_url#}}
+
+
+
+            Job Description (primary):
+
+            {{#1767247535851.job_description#}}
+
+
+            Additional job descriptions for comparison:
+
+            Job 2: {{#1767247535851.job_description_2#}}
+
+            Job 3: {{#1767247535851.job_description_3#}}
+
+
+            Please extract and structure the job requirements in Japanese.{{#1767247535851.job_url#}}'
+        selected: false
+        title: Job URL Scraper
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767341853199'
+      position:
+        x: 682
+        y: 282
+      positionAbsolute:
+        x: 682
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: f1c1e2a9-ace7-4af0-945d-664294626a4f
+          role: system
+          text: "You are a resume customization expert. Based on the analyzed resume\
+            \ and job requirements, create an optimized version of the resume specifically\
+            \ tailored for this job application.\n\nYour task:\n1. Emphasize relevant\
+            \ experiences and skills that match the job requirements\n2. Reorder sections\
+            \ to highlight the most relevant information first\n3. Add quantifiable\
+            \ achievements where possible\n4. Include relevant keywords from the job\
+            \ description\n5. Maintain professional formatting\n\nStructure the optimized\
+            \ resume with these sections in Japanese:\n\n【氏名・連絡先】\n【職務要約】（100字以内で求人に合わせて最適化）\n\
+            【コアスキル】（求人要件に合致するものを前面に）\n【職歴】（関連性の高い業務を強調）\n【主要実績】（数値化された成果）\n【技術スキル】（必須スキルを明確に記載）\n\
+            【資格・学歴】\n【自己PR】（この求人に特化した内容、150字）\n\nIMPORTANT: \n- Output a complete,\
+            \ ready-to-submit resume in Japanese\n- Ensure all required skills from\
+            \ the job are clearly visible\n- Keep the format professional and easy\
+            \ to scan"
+        - id: 5e186432-9d68-418e-8b3d-a4ab20a39e40
+          role: user
+          text: 'Create an optimized resume based on the f/ollowing information:
+
+
+            Original Resume Analysis:
+
+            {{#1767341486593.text#}}
+
+
+            Job Requirements Analysis:
+
+            {{#1767341853199.text#}}
+
+
+            Original Resume Text:
+
+            {{#1767247535851.resume_text#}}
+
+
+            Generate a customized resume in Japanese that perfectly matches the job
+            requirements.'
+        selected: false
+        title: Resume Customizer
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767343390321'
+      position:
+        x: 1067.449276781685
+        y: 106.60411607969905
+      positionAbsolute:
+        x: 1067.449276781685
+        y: 106.60411607969905
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 4168a5d4-056a-4015-9577-c6b0c19a1674
+          role: system
+          text: "You are a career history optimization expert. Create an optimized\
+            \ career history document tailored for the specific job requirements.\n\
+            \nOptimize the career history with the following structure in Japanese:\n\
+            \n【職務要約】\n- 100字以内で求人要件に合致する経験をハイライト\n\n【職歴詳細】\nFor each position:\n-\
+            \ 会社名・部署・役職・期間\n- 担当業務（求人に関連する業務を重点的に）\n- 実績・成果（STAR形式で記載）\n  S: Situation（状況）\n\
+            \  T: Task（課題）\n  A: Action（行動）\n  R: Result（結果・数値化）\n- 使用技術（求人の必須スキルと合致するものを強調）\n\
+            \n【プロジェクト実績】\n- 求人要件に最も関連する3-5個のプロジェクト\n- 各プロジェクトで果たした役割と成果\n\n【技術スキルマトリックス】\n\
+            - スキル名 | 経験年数 | 習熟度 | 直近の使用\n\n【自己PR】\n- 200字で求人に対する適性をアピール\n\nIMPORTANT:\n\
+            - Quantify achievements with numbers\n- Use STAR format for major accomplishments\n\
+            - Highlight skills matching job requirements\n- Output everything in Japanese"
+        - id: 2b74cb4c-5640-40cc-af06-a936a63a5ba1
+          role: user
+          text: 'Optimize the career history for the target job:
+
+
+            Career History:
+
+            {{#1767247535851.career_history#}}
+
+
+            Job Requirements:
+
+            {{#1767341853199.text#}}
+
+
+            Resume Analysis:
+
+            {{#1767341486593.text#}}
+
+
+            Create a compelling career history document optimized for this specific
+            job in Japanese.'
+        selected: false
+        title: Career History Optimizer
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767344053383'
+      position:
+        x: 1282
+        y: 282
+      positionAbsolute:
+        x: 1282
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: f0cf18ae-d4d6-4f9e-bfb9-603e6b313cf1
+          role: system
+          text: "You are an application package specialist. Generate a complete job\
+            \ application package in Japanese, perfectly tailored for the target position.\n\
+            \nCreate the following documents:\n\n【応募書類一式】\n\n1. カスタマイズ済み履歴書\n   -\
+            \ 最適化された履歴書の最終版\n\n2. 最適化済み職務経歴書\n   - 求人に特化した職務経歴書の最終版\n\n3. 志望動機書（300字以内）\n\
+            \   - なぜこの企業か\n   - なぜこのポジションか\n   - 何を貢献できるか\n\n4. 自己PR（200字以内）\n   -\
+            \ 最も関連性の高い強み\n   - 具体的な実績\n   - 入社後の貢献\n\n5. 応募メール文面\n   - 件名\n   - 本文（ビジネスメール形式）\n\
+            \   - 添付書類リスト\n\n6. 面接準備メモ\n   - 想定質問TOP5と回答案\n   - 逆質問案3つ\n\nIMPORTANT:\n\
+            - All content must be in Japanese\n- Keep formatting professional\n- Ensure\
+            \ consistency across all documents\n- Ready for immediate submission"
+        - id: 60888ded-9e37-4fa4-badc-6492af7a9fc7
+          role: user
+          text: 'Generate a complete application package based on:
+
+
+            Customized Resume:
+
+            {{#1767343390321.text#}}
+
+
+            Optimized Career History:
+
+            {{#1767344053383.text#}}
+
+
+            Job Analysis:
+
+            {{#1767247812360.text#}}
+
+
+            Create all application documents ready for submission in Japanese./'
+        selected: false
+        title: Application Package Generator
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767344536321'
+      position:
+        x: 2483.9173572306445
+        y: 282
+      positionAbsolute:
+        x: 2483.9173572306445
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.4
+          mode: chat
+          name: qwen2.5:7b
+          provider: langgenius/ollama/ollama
+        prompt_template:
+        - id: 03da9891-0ec8-419e-bf12-6def66a3f41b
+          role: system
+          text: "You are an application package specialist. Generate a complete job\
+            \ application package in Japanese, perfectly tailored for the target position.\n\
+            \nCreate the following documents:\n\n【応募書類一式】\n\n1. カスタマイズ済み履歴書\n   -\
+            \ 最適化された履歴書の最終版\n\n2. 最適化済み職務経歴書\n   - 求人に特化した職務経歴書の最終版\n\n3. 志望動機書（300字以内）\n\
+            \   - なぜこの企業か\n   - なぜこのポジションか\n   - 何を貢献できるか\n\n4. 自己PR（200字以内）\n   -\
+            \ 最も関連性の高い強み\n   - 具体的な実績\n   - 入社後の貢献\n\n5. 応募メール文面\n   - 件名\n   - 本文（ビジネスメール形式）\n\
+            \   - 添付書類リスト\n\n6. 面接準備メモ\n   - 想定質問TOP5と回答案\n   - 逆質問案3つ\n\nIMPORTANT:\n\
+            - All content must be in Japanese\n- Keep formatting professional\n- Ensure\
+            \ consistency across all documents\n- Ready for immediate submission"
+        - id: fcdc5652-6fdf-47e6-be28-8c6b0ac646a6
+          role: user
+          text: 'Generate a complete application package based on:
+
+
+            Customized Resume:
+
+            {{#1767343390321.text#}}
+
+
+            Optimized Career History:
+
+            {{#1767344053383.text#}}
+
+
+            Job Analysis:
+
+            {{#1767247812360.text#}}
+
+
+            Create all application documents ready for submission in Japanese.'
+        selected: false
+        title: Application Package Generator
+        type: llm
+        vision:
+          enabled: false
+      height: 86
+      id: '1767344631071'
+      position:
+        x: 2183.9173572306445
+        y: 282
+      positionAbsolute:
+        x: 2183.9173572306445
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    viewport:
+      x: -1796.1648445439105
+      y: 348.7931944829245
+      zoom: 0.3866588534037031
+  rag_pipeline_variables: []
